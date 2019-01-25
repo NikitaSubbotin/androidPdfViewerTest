@@ -19,11 +19,11 @@ export default class App extends Component<Props> {
           <Text style={styles.welcome}>Welcome to React Native!</Text>
           <Pdf
               source={source}
-              onLoadComplete={(numberOfPages,filePath)=>{
-                  console.log(`number of pages: ${numberOfPages}`);
+              onLoadComplete={(numberOfPages,filePath,size)=>{
+                  console.log(numberOfPages,filePath,size);
               }}
               onPageChanged={(page,numberOfPages)=>{
-                  console.log(`current page: ${page}`);
+                  console.log(page,numberOfPages);
               }}
               onError={(error)=>{
                   console.log(error);
